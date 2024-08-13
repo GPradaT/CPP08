@@ -10,10 +10,17 @@ int	main( void )
 
 	try
 	{
-		std::vector<int>::iterator ref;
-		ref = ::easyfind(abc, 3);
+		std::vector<int>::iterator ref = ::easyfind(abc, 3);
 		std::cout << *ref << std::endl;
 	} catch (std::exception &e) {
 		std::cout << e.what() << std::endl;
 	}
+	try
+	{
+		std::vector<int>::iterator ref = ::easyfind(abc, 13);
+		std::cout << *ref << std::endl;
+	} catch (std::exception &e) {
+		std::cout << e.what() << std::endl;
+	}
+	return 0;
 }
