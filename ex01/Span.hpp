@@ -6,6 +6,7 @@
 # include <exception>
 # include <cmath>
 # include <climits>
+# include <algorithm>
 
 # define FULL "The container is Full, srry :)"
 # define VOIDVECT "Insufficient elements to get Thus values... ¬¬"

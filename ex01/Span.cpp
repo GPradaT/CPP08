@@ -49,7 +49,7 @@ void	Span::printNumbers() const
 
 int	Span::shortestSpan() const
 {
-	int	distance;
+	int	distance = 0;
 	if (_max <= 1)
 		throw VoidVect();
 	else
