@@ -3,17 +3,20 @@
 int main()
 {
 	Span	span(8);
+	Span	span2;
 
 	span.getNumbers();
-	try{
-		for (unsigned int i = 0; i < 10; i++)
-		{
-			span.addNumber(3);
+	for (unsigned int i = 0; i < 10; i++)
+	{
+		try{
+			span.addNumber(i);
 			std::cout << std::endl;
 			span.getNumbers();
+		} catch (std::exception &e) {
+		std::cout << e.what() << std::endl;
 		}
-	} catch (Span::WeAreFull &e) {
-		std::cout << e.Full() << std::endl;
 	}
+	std::cout << span.shortestSpan() << std::endl;
+	span.getNumbers();
 	return 0;
 }

@@ -3,6 +3,9 @@
 
 # include <iostream>
 # include <vector>
+# include <exception>
+# include <cmath>
+# include <climits>
 
 # define FULL "The container is Full, srry :)"
 # define VOIDVECT "Insufficient elements to get Thus values... ¬¬"
@@ -22,14 +25,18 @@ class	Span
 
 		void	addNumber(int num);
 		void	getNumbers() const;
+		int	shortestSpan() const;
+//		int	longestSpan() const;
 
-
-		class	WeAreFull : public std::exception {
+		class	Full : public std::exception {
 			public:
-				virtual const char *Full() const throw() {
+				virtual const char *what() const throw() {
 					return FULL;
 				}
-				virtual const char *VoidVector() const throw() {
+		};
+		class	VoidVect : public std::exception {
+			public:
+				virtual const char *what() const throw() {
 					return VOIDVECT;
 				}
 		};
