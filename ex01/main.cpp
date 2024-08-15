@@ -5,18 +5,24 @@ int main()
 	Span	span(8);
 	Span	span2;
 
-	span.getNumbers();
-	for (unsigned int i = 0; i < 10; i++)
-	{
-		try{
-			span.addNumber(i);
-			std::cout << std::endl;
-			span.getNumbers();
-		} catch (std::exception &e) {
-		std::cout << e.what() << std::endl;
-		}
-	}
+	span.printNumbers();
+	std::cout << "====================" << std::endl;
+	span.addNumber(12);
+	span.addNumber(14);
+	span.addNumber(1);
+	span.addNumber(4);
+	span.addNumber(3);
+	span.addNumber(-12);
+	span.addNumber(-3);
+	std::cout << "====================" << std::endl;
+	span.printNumbers();
+	
+	std::cout << "===ShortestSpan=====" << std::endl;
+	
 	std::cout << span.shortestSpan() << std::endl;
-	span.getNumbers();
+	std::cout << "===LongestSpan======" << std::endl;
+	std::cout << span.longestSpan() << std::endl;
+	std::cout << "====================" << std::endl;
+	span.printNumbers();
 	return 0;
 }
