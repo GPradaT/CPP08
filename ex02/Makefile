@@ -1,6 +1,6 @@
-NAME=	MutatedStack
+NAME=	MutantStack
 
-SRC=	MutatedStack.cpp main.cpp \
+SRC=	main.cpp \
 
 OBJ=	$(SRC:.cpp=.o)
 DEP=	$(SRC:.cpp=.d)
